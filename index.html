@@ -215,8 +215,6 @@
     <!-- Menu fixo e responsivo -->
     <nav>
         <div class="logo">Motiva TTF</div>
-        
-
     </nav>
 
     <!-- Header com logos -->
@@ -347,9 +345,25 @@
 
         ];
 
+        let usedVerses = [];
+
         function newVerse() {
-            const randomIndex = Math.floor(Math.random() * verses.length);
-            document.querySelector(".quote-container p").innerText = verses[randomIndex];
+            // Sorteio de uma frase diferente
+            let randomIndex;
+            do {
+                randomIndex = Math.floor(Math.random() * verses.length);
+            } while (usedVerses.includes(randomIndex));  // Verifica se a frase já foi usada
+
+            usedVerses.push(randomIndex);  // Adiciona o índice da frase ao array
+
+            // Limita o número de frases exibidas
+            if (usedVerses.length === verses.length) {
+                usedVerses = []; // Reseta o array quando todas as frases forem usadas
+            }
+
+            // Exibe a frase
+            const quoteContainer = document.querySelector('.quote-container p');
+            quoteContainer.textContent = verses[randomIndex];
         }
     </script>
 </body>
