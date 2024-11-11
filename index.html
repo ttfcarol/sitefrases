@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspiração Diária</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #3A3A3A, #121212);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        /* Menu fixo e responsivo */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #111;
+            padding: 15px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+            transition: background-color 0.3s ease;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color:rgb(218, 30, 30);
+        }
+
+        nav .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(218, 30, 30);
+            text-transform: uppercase;
+        }
+
+        nav .menu-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav .menu-links a {
+            font-size: 1.1rem;
+        }
+
+        nav .menu-links a:hover {
+            color: rgb(218, 30, 30);
+            text-decoration: underline;
+        }
+
+        /* Header com logos */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 190px;
+            margin-top: 90px;
+            z-index: 9;
+            display: flex;
+    
+        }
+
+        header img {
+            max-width: 250px;
+            height: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .quote-container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 1s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        .quote-container p {
+            font-size: 1.6rem;
+            line-height: 1.6;
+            font-weight: 400;
+            margin-bottom: 25px;
+            color: #EDEDED;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .button {
+            background-color: rgb(218, 30, 30);
+            color: #fff;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(218, 30, 30);
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1rem;
+            color: #bbb;
+            z-index: 1;
+        }
+
+        footer a {
+            color:rgb(218, 30, 30);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .quote-container {
+                width: 90%;
+                padding: 30px;
+            }
+
+            .quote-container p {
+                font-size: 1.4rem;
+            }
+
+            header img {
+                max-width: 200px;
+            }
+
+            nav .menu-links {
+                display: none;
+            }
+
+            nav .menu-links.active {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #111;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6);
+            }
+
+            nav .menu-links a {
+                font-size: 1.2rem;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu fixo e responsivo -->
+    <nav>
+        <div class="logo">Motiva TTF</div>
+        <div class="menu-links">
+            <a href="https://ttfalimentos.com.br/" target="_blank">Início</a>
+        
+        </div>
+    </nav>
+
+    <!-- Header com logos -->
+    <header>
+        <img src="7.svg" alt="Logo 1">
+        <img src="6.svg" alt="Logo 2">
+    </header>
+
+    <!-- Seção do versículo -->
+    <div class="quote-container">
+        <p>O Senhor é o meu pastor; de nada terei falta. — Salmo 23:1 (NVI)</p>
+        <button class="button" onclick="newVerse()">Novo Versículo</button>
+    </div>
+
+  
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Inspirado por <a href="https://ttfalimentos.com.br">TTF Alimentos</a></p>
+    </footer>
+
+    <script>
+        const verses = [
+        "O Senhor é o meu pastor; de nada terei falta. — Salmo 23:1 (NVI)",  
+        "Tudo posso naquele que me fortalece. — Filipenses 4:13 (NVI)",  
+        "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crer não pereça, mas tenha a vida eterna. — João 3:16 (NVI)",  
+        "Confie no Senhor de todo o seu coração e não se apoie em seu próprio entendimento. — Provérbios 3:5 (NVI)",  
+        "O Senhor é bom para todos, e as suas misericórdias estão sobre todas as suas obras.— Salmo 145:9 (NVI)" ,  
+        "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai senão por mim.— João 14:6 (NVI)" ,  
+        "Portanto, não se preocupem dizendo: O que vamos comer? ou O que vamos beber? ou O que vamos vestir?— Mateus 6:31 (NVI)" ,  
+        "E sabemos que em todas as coisas Deus trabalha para o bem daqueles que o amam, dos que foram chamados segundo o seu propósito.— Romanos 8:28 (NVI)" ,  
+        "O Senhor é a minha luz e a minha salvação; de quem terei medo? O Senhor é o forte refúgio da minha vida; de quem terei medo?— Salmo 27:1 (NVI)" ,  
+        "Entrega o teu caminho ao Senhor; confia nele, e ele o fará.— Salmo 37:5 (NVI)" ,  
+        "Acredite em você e tudo será possível.",  
+        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",  
+        "O único limite para o seu sucesso é a sua vontade de tentar.",  
+        "A perseverança é a chave para transformar sonhos em realidade.",  
+        "Cada dia é uma nova chance de recomeçar.",  
+        "Nada é impossível para quem tem determinação.",  
+        "O maior erro que você pode cometer é o de não tentar.",  
+        "Você é mais forte do que pensa, mais capaz do que imagina.",  
+        "O futuro pertence àqueles que acreditam na beleza de seus sonhos.",  
+        "Se você não puder fazer grandes coisas, faça pequenas coisas de forma grandiosa.",  
+        "Acredite no processo, tudo acontece no tempo certo.",  
+        "Não importa o quão devagar você vá, desde que não pare.",  
+        "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",  
+        "Se você quer alcançar algo que nunca teve, precisa fazer algo que nunca fez.",  
+        "O primeiro passo é sempre o mais difícil, mas é o mais importante.",  
+        "A única maneira de fazer um excelente trabalho é amar o que você faz.",  
+        "Cada desafio é uma oportunidade disfarçada.",  
+        "Não desista, pois grandes coisas levam tempo.",  
+        "Acredite no seu potencial, você é capaz de ir além.",  
+        "A vida é feita de escolhas, e cada escolha leva a um novo caminho.",  
+        "A vitória pertence aos persistentes.",  
+        "Se você quer mudar o mundo, comece por mudar a si mesmo.",  
+        "A felicidade não é um destino, é uma forma de viajar.",  
+        "Coragem não é a ausência do medo, mas a capacidade de superá-lo.",  
+        "Seja a mudança que você quer ver no mundo.",  
+        "O maior risco é não correr nenhum risco.",  
+        "Tudo o que você precisa para ser bem-sucedido já está dentro de você.",  
+        "Nossos maiores medos não são que sejamos inadequados, mas que sejamos poderosos além da conta.",  
+        "O sucesso não é final, o fracasso não é fatal: o que conta é a coragem de continuar.",  
+        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",  
+        "O Senhor é o meu refúgio e a minha fortaleza, o meu Deus, em quem confio.— Salmo 91:2 (NVI)" ,  
+        "Mas aqueles que esperam no Senhor renovarão as suas forças. Subirão com asas como águias; correrão, e não se cansarão; andarão, e não se fatigarão.— Isaías 40:31 (NVI)" ,  
+        "O Senhor é perto de todos os que o invocam, de todos os que o invocam em verdade.— Salmo 145:18 (NVI)" ,  
+        "Onde não há visão, o povo perece.— Provérbios 29:18 (NVI)" ,  
+        "Eu sou o bom pastor; o bom pastor dá a sua vida pelas ovelhas.— João 10:11 (NVI)" ,  
+        "Aquele que habita no abrigo do Altíssimo e descansa à sombra do Onipotente.— Salmo 91:1 (NVI)" ,  
+        "Portanto, não se preocupem com o amanhã, pois o amanhã trará suas próprias preocupações.— Mateus 6:34 (NVI)" ,  
+        "E nós sabemos que, em todas as coisas, Deus trabalha para o bem daqueles que o amam.— Romanos 8:28 (NVI)" ,  
+        "Não vos embriagueis com vinho, no qual há dissolução; mas enchei-vos do Espírito.— Efésios 5:18 (NVI)" ,  
+        "O Senhor é justo em todos os seus caminhos, e bondoso em tudo o que faz.— Salmo 145:17 (NVI)" ,  
+        "Nunca é tarde para começar a ser o que você poderia ter sido.",  
+        "Grandes sonhos exigem grandes esforços.",  
+        "Nunca deixe que o medo de perder seja maior que a vontade de ganhar.",  
+        "As melhores coisas da vida acontecem fora da sua zona de conforto.",  
+        "Se você quer alcançar a excelência, pare de pedir permissão.",  
+        "Não espere por uma oportunidade, crie-a.",  
+        "Não existe sucesso sem esforço.",  
+        "O verdadeiro fracasso é não tentar.",  
+        "Se você quer algo que nunca teve, precisa fazer algo que nunca fez.",  
+        "A vida é feita de escolhas, e cada escolha leva a um novo caminho.",  
+        "Não espere por uma oportunidade perfeita, aproveite a oportunidade que você tem.",  
+        "Você nunca será mais forte do que hoje, acredite!",  
+        "O sucesso é um caminho, não um destino.",  
+        "Não importa quantas vezes você cai, o que importa é quantas vezes você se levanta.",  
+        "A verdadeira força vem da superação dos obstáculos.",  
+        "Você tem tudo o que precisa para realizar seus sonhos.",  
+        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",  
+        "A motivação é o que faz você começar. O hábito é o que faz você continuar.",  
+        "Não é o quanto você faz, mas o quanto amor você coloca no que faz.",  
+        "Acredite que você pode, e você já está no meio do caminho.",  
+        "E tudo o que fizerdes, fazei-o de coração, como para o Senhor e não para os homens.— Colossenses 3:23 (NVI)" ,  
+        "Bem-aventurados os que têm fome e sede de justiça, pois serão fartos.— Mateus 5:6 (NVI)" ,  
+        "Buscai primeiro o reino de Deus e a sua justiça, e todas essas coisas vos serão acrescentadas.— Mateus 6:33 (NVI)" ,  
+        "O Senhor é a minha força e o meu escudo; nele o meu coração confia, e nele fui socorrido.— Salmo 28:7 (NVI)" ,  
+        "Pois Deus não nos deu espírito de covardia, mas de poder, de amor e de moderação.— 2 Timóteo 1:7 (NVI)" ,  
+        "Portanto, não tenha medo; vocês valem mais do que muitos pardais.— Mateus 10:31 (NVI)" ,  
+        "A fé é a certeza daquilo que esperamos e a prova das coisas que não vemos.— Hebreus 11:1 (NVI)" ,  
+        "Seja forte e corajoso! Não tenha medo, nem desanime, pois o Senhor, o seu Deus, estará com você por onde você andar.— Josué 1:9 (NVI)" ,  
+        "O Senhor é a minha luz e a minha salvação; de quem terei medo? — Salmo 27:1 (NVI)" ,  
+        "Bendito o homem que confia no Senhor e cuja confiança é o Senhor.— Jeremias 17:7 (NVI)" ,  
+        "O sucesso não é final, o fracasso não é fatal, é a coragem de continuar que conta.",  
+        "A verdadeira vitória vem da persistência.",  
+        "Onde há coragem, há sucesso.",  
+        "Acredite que você pode e você já está no meio do caminho.",  
+        "Se você não arriscar, não vai alcançar.",  
+        "A única pessoa que você está destinado a se tornar é a pessoa que você decide ser.",  
+        "Se você quer resultados diferentes, faça coisas diferentes.",  
+        "A vida não é esperar a tempestade passar, é aprender a dançar na chuva.",  
+        "Nada grande nunca foi alcançado sem entusiasmo.",  
+        "Se você acredita, você já está no caminho certo.",  
+        "Transforme seus sonhos em metas e seus medos em desafios.",  
+        "Você é capaz de fazer coisas incríveis, basta acreditar.",  
+        "O maior erro que você pode cometer é não tentar.",  
+        "Cada passo dado é uma conquista.",  
+        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",  
+        "Se você não tentar, a resposta será sempre não.",  
+        "Seja a mudança que você quer ver no mundo.",  
+        "O sucesso começa com a decisão de tentar.",  
+        "A única forma de fazer um excelente trabalho é amar o que você faz.",  
+        "O futuro depende do que você faz hoje."
+
+        ];
+
+        function newVerse() {
+            const randomIndex = Math.floor(Math.random() * verses.length);
+            document.querySelector('.quote-container p').textContent = verses[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
