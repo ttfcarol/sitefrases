@@ -16,9 +16,10 @@
         }
 
         body {
-            background-image: url('fundo.png'); /* Substitua pelo caminho da sua imagem */
+            background-image: url('fundo.jpg'); /* Substitua pelo caminho da sua imagem */
             background-size: cover; /* A imagem vai cobrir toda a tela */
             background-position: center; /* A imagem estará centralizada */
+            background-attachment: fixed; /* Efetivo para imagens de fundo que não se movem em relação ao conteúdo */
             color: #fff;
             height: 100vh;
             display: flex;
@@ -112,7 +113,7 @@
 
         .button {
             background-color: #bd1010;
-            color: #fff;
+            color: #fff; 
             border: none;
             padding: 15px 40px;
             border-radius: 50px;
@@ -350,7 +351,6 @@
         let usedVerses = [];
 
         function newVerse() {
-            // Sorteio de uma frase diferente
             let randomIndex;
             do {
                 randomIndex = Math.floor(Math.random() * verses.length);
@@ -358,12 +358,10 @@
 
             usedVerses.push(randomIndex);  // Adiciona o índice da frase ao array
 
-            // Limita o número de frases exibidas
             if (usedVerses.length === verses.length) {
                 usedVerses = []; // Reseta o array quando todas as frases forem usadas
             }
 
-            // Exibe a frase
             const quoteContainer = document.querySelector('.quote-container p');
             quoteContainer.textContent = verses[randomIndex];
         }
