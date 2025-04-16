@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inspiração Diária</title>
+    <title>Sua Inspiração Diária</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
@@ -201,7 +201,7 @@
         }
 
         .logos img {
-            max-width: 120px;
+            max-width: 150px;
             height: auto;
         }
 
@@ -218,19 +218,19 @@
 
     <!-- Menu fixo e responsivo -->
     <nav>
-        <div class="logo">Motiva TTF</div>
+        <div class="logo">Motiva TTF Alimentos</div>
     </nav>
 
     <!-- Header com logos -->
     <header>
         <div class="logos">
-            <img src="6.svg" alt="Logo 1"> <!-- Substitua pelo caminho da sua primeira logo -->
-            <img src="7.svg" alt="Logo 2"> <!-- Substitua pelo caminho da sua segunda logo -->
+            
+            <img src="TTF .png" alt="Logo 2"> <!-- Substitua pelo caminho da sua segunda logo -->
         </div>
     </header>
 
     <!-- Frase antes do sorteio -->
-    <p style="font-size: 1.2rem; margin-bottom: 20px; color: #EDEDED; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);">Para um dia mais abençoado, sorteie uma frase!</p>
+    <p style="font-size: 1.2rem; margin-bottom: 20px; color: #EDEDED; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);">Comece o dia com inspiração: toque para receber a sua!</p>
 
     <!-- Seção do versículo -->
     <div class="quote-container">
@@ -245,157 +245,135 @@
 
     <script>
         const verses = [
-        "O Senhor é o meu pastor; de nada terei falta. — Salmo 23:1 (NVI)",  
-        "Tudo posso naquele que me fortalece. — Filipenses 4:13 (NVI)",  
-        "Porque Deus amou o mundo de tal maneira que deu o seu Filho unigênito, para que todo aquele que nele crer não pereça, mas tenha a vida eterna. — João 3:16 (NVI)",  
-        "Confie no Senhor de todo o seu coração e não se apoie em seu próprio entendimento. — Provérbios 3:5 (NVI)",  
-        "O Senhor é bom para todos, e as suas misericórdias estão sobre todas as suas obras.— Salmo 145:9 (NVI)" ,  
-        "Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai senão por mim.— João 14:6 (NVI)" ,  
-        "Portanto, não se preocupem dizendo: O que vamos comer? ou O que vamos beber? ou O que vamos vestir?— Mateus 6:31 (NVI)" ,  
-        "E sabemos que em todas as coisas Deus trabalha para o bem daqueles que o amam, dos que foram chamados segundo o seu propósito.— Romanos 8:28 (NVI)" ,  
-        "O Senhor é a minha luz e a minha salvação; de quem terei medo? O Senhor é o forte refúgio da minha vida; de quem terei medo?— Salmo 27:1 (NVI)" ,  
-        "Entrega o teu caminho ao Senhor; confia nele, e ele o fará.— Salmo 37:5 (NVI)" ,  
-        "Acredite em você e tudo será possível.",  
-        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",  
-        "O único limite para o seu sucesso é a sua vontade de tentar.",  
-        "A perseverança é a chave para transformar sonhos em realidade.",  
-        "Cada dia é uma nova chance de recomeçar.",  
-        "Nada é impossível para quem tem determinação.",  
-        "O maior erro que você pode cometer é o de não tentar.",  
-        "Você é mais forte do que pensa, mais capaz do que imagina.",  
-        "O futuro pertence àqueles que acreditam na beleza de seus sonhos.",  
-        "Se você não puder fazer grandes coisas, faça pequenas coisas de forma grandiosa.",  
-        "Acredite no processo, tudo acontece no tempo certo.",  
-        "Não importa o quão devagar você vá, desde que não pare.",  
-        "O único lugar onde o sucesso vem antes do trabalho é no dicionário.",  
-        "Se você quer alcançar algo que nunca teve, precisa fazer algo que nunca fez.",  
-        "O primeiro passo é sempre o mais difícil, mas é o mais importante.",  
-        "A única maneira de fazer um excelente trabalho é amar o que você faz.",  
-        "Cada desafio é uma oportunidade disfarçada.",  
-        "Não desista, pois grandes coisas levam tempo.",  
-        "Acredite no seu potencial, você é capaz de ir além.",  
-        "A vida é feita de escolhas, e cada escolha leva a um novo caminho.",  
-        "A vitória pertence aos persistentes.",  
-        "Se você quer mudar o mundo, comece por mudar a si mesmo.",  
-        "A felicidade não é um destino, é uma forma de viajar.",  
-        "Coragem não é a ausência do medo, mas a capacidade de superá-lo.",  
-        "Seja a mudança que você quer ver no mundo.",  
-        "O maior risco é não correr nenhum risco.",  
-        "Tudo o que você precisa para ser bem-sucedido já está dentro de você.",  
-        "Nossos maiores medos não são que sejamos inadequados, mas que sejamos poderosos além da conta.",  
-        "O sucesso não é final, o fracasso não é fatal: o que conta é a coragem de continuar.",  
-        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",  
-        "O Senhor é o meu refúgio e a minha fortaleza, o meu Deus, em quem confio.— Salmo 91:2 (NVI)" ,  
-        "Mas aqueles que esperam no Senhor renovarão as suas forças. Subirão com asas como águias; correrão, e não se cansarão; andarão, e não se fatigarão.— Isaías 40:31 (NVI)" ,  
-        "O Senhor é perto de todos os que o invocam, de todos os que o invocam em verdade.— Salmo 145:18 (NVI)" ,  
-        "Onde não há visão, o povo perece.— Provérbios 29:18 (NVI)" ,  
-        "Eu sou o bom pastor; o bom pastor dá a sua vida pelas ovelhas.— João 10:11 (NVI)" ,  
-        "Aquele que habita no abrigo do Altíssimo e descansa à sombra do Onipotente.— Salmo 91:1 (NVI)" ,  
-        "Portanto, não se preocupem com o amanhã, pois o amanhã trará suas próprias preocupações.— Mateus 6:34 (NVI)" ,  
-        "E nós sabemos que, em todas as coisas, Deus trabalha para o bem daqueles que o amam.— Romanos 8:28 (NVI)" ,  
-        "Não vos embriagueis com vinho, no qual há dissolução; mas enchei-vos do Espírito.— Efésios 5:18 (NVI)" ,  
-        "O Senhor é justo em todos os seus caminhos, e bondoso em tudo o que faz.— Salmo 145:17 (NVI)" ,  
-        "Nunca é tarde para começar a ser o que você poderia ter sido.",  
-        "Grandes sonhos exigem grandes esforços.",  
-        "Nunca deixe que o medo de perder seja maior que a vontade de ganhar.",  
-        "As melhores coisas da vida acontecem fora da sua zona de conforto.",  
-        "Se você quer alcançar a excelência, pare de pedir permissão.",  
-        "Não espere por uma oportunidade, crie-a.",  
-        "Não existe sucesso sem esforço.",  
-        "O verdadeiro fracasso é não tentar.",  
-        "Se você quer algo que nunca teve, precisa fazer algo que nunca fez.",  
-        "A vida é feita de escolhas, e cada escolha leva a um novo caminho.",  
-        "Não espere por uma oportunidade perfeita, aproveite a oportunidade que você tem.",  
-        "Você nunca será mais forte do que hoje, acredite!",  
-        "O sucesso é um caminho, não um destino.",  
-        "Não importa quantas vezes você cai, o que importa é quantas vezes você se levanta.",  
-        "A verdadeira força vem da superação dos obstáculos.",  
-        "Você tem tudo o que precisa para realizar seus sonhos.",  
-        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",  
-        "A motivação é o que faz você começar. O hábito é o que faz você continuar.",  
-        "Não é o quanto você faz, mas o quanto amor você coloca no que faz.",  
-        "Acredite que você pode, e você já está no meio do caminho.",  
-        "E tudo o que fizerdes, fazei-o de coração, como para o Senhor e não para os homens.— Colossenses 3:23 (NVI)" ,  
-        "Bem-aventurados os que têm fome e sede de justiça, pois serão fartos.— Mateus 5:6 (NVI)" ,  
-        "Buscai primeiro o reino de Deus e a sua justiça, e todas essas coisas vos serão acrescentadas.— Mateus 6:33 (NVI)" ,  
-        "O Senhor é a minha força e o meu escudo; nele o meu coração confia, e nele fui socorrido.— Salmo 28:7 (NVI)" ,  
-        "Pois Deus não nos deu espírito de covardia, mas de poder, de amor e de moderação.— 2 Timóteo 1:7 (NVI)" ,  
-        "Portanto, não tenha medo; vocês valem mais do que muitos pardais.— Mateus 10:31 (NVI)" ,  
-        "A fé é a certeza daquilo que esperamos e a prova das coisas que não vemos.— Hebreus 11:1 (NVI)" ,  
-        "Seja forte e corajoso! Não tenha medo, nem desanime, pois o Senhor, o seu Deus, estará com você por onde você andar.— Josué 1:9 (NVI)" ,  
-        "O Senhor é a minha luz e a minha salvação; de quem terei medo? — Salmo 27:1 (NVI)" ,  
-        "Bendito o homem que confia no Senhor e cuja confiança é o Senhor.— Jeremias 17:7 (NVI)" ,  
-        "O sucesso não é final, o fracasso não é fatal, é a coragem de continuar que conta.",  
-        "A verdadeira vitória vem da persistência.",  
-        "Onde há coragem, há sucesso.",  
-        "Acredite que você pode e você já está no meio do caminho.",  
-        "Se você não arriscar, não vai alcançar.",  
-        "A única pessoa que você está destinado a se tornar é a pessoa que você decide ser.",  
-        "Se você quer resultados diferentes, faça coisas diferentes.",  
-        "A vida não é esperar a tempestade passar, é aprender a dançar na chuva.",  
-        "Nada grande nunca foi alcançado sem entusiasmo.",  
-        "Se você acredita, você já está no caminho certo.",  
-        "Transforme seus sonhos em metas e seus medos em desafios.",  
-        "Você é capaz de fazer coisas incríveis, basta acreditar.",  
-        "O maior erro que você pode cometer é não tentar.",  
-        "Cada passo dado é uma conquista.",  
-        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",  
-        "Se você não tentar, a resposta será sempre não.",  
-        "Seja a mudança que você quer ver no mundo.",  
-        "O sucesso começa com a decisão de tentar.",  
-        "A única forma de fazer um excelente trabalho é amar o que você faz.",  
-        "O futuro depende do que você faz hoje.",
-        "O Senhor é o meu refúgio e a minha fortaleza; em quem confiarei? — Salmo 18:2 (NVI)",
-        "Deus é fiel para cumprir todas as suas promessas. — 2 Coríntios 1:20 (NVI)",
-        "Onde estiver o teu tesouro, aí estará também o teu coração. — Mateus 6:21 (NVI)",
-        "A paz de Deus, que excede todo o entendimento, guardará os vossos corações e os vossos pensamentos. — Filipenses 4:7 (NVI)",
-        "Aquele que habita no esconderijo do Altíssimo, à sombra do Onipotente descansará. — Salmo 91:1 (NVI)",
-        "Acredite que você pode, e você já está no meio do caminho.",
-        "O sucesso não é o quanto você alcança, mas o quanto você inspira.",
-        "Grandes realizações começam com pequenas atitudes de coragem.",
-        "O amanhã pertence àqueles que se preparam hoje.",
-        "Não há atalho para o sucesso, apenas trabalho árduo e perseverança.",
-        "Deus é a minha luz e a minha salvação; a quem temerei? — Salmo 27:1 (NVI)",
-        "A perseverança transforma sonhos em realidades concretas.",
-        "Lute por seus sonhos, pois ninguém mais fará isso por você.",
-        "Com Deus ao seu lado, nada é impossível.",
-        "Aqueles que confiam no Senhor encontrarão forças renovadas. — Isaías 40:31 (NVI)",
-        "A vida não é sobre esperar a tempestade passar, mas aprender a dançar na chuva.",
-        "Nunca subestime o poder de um simples passo em direção ao seu objetivo.",
-        "Com fé em Deus, você pode mover montanhas.",
-        "O Senhor é meu pastor e nada me faltará. — Salmo 23:1 (NVI)",
-        "A única maneira de fazer um excelente trabalho é amar o que você faz.",
-        "O futuro pertence àqueles que acreditam na beleza dos seus sonhos. — Jeremias 29:11 (NVI)",
-        "A vida é 10% o que acontece com você e 90% como você reage a isso.",
-        "Fé não é acreditar que Deus pode, é saber que Ele vai.",
-        "O único limite para os nossos sonhos é o tamanho da nossa fé.",
-        "Em cada dificuldade há uma oportunidade disfarçada.",
-        "Deus não nos deu um espírito de medo, mas de poder, amor e equilíbrio. — 2 Timóteo 1:7 (NVI)",
-        "Coragem não é a ausência de medo, mas a determinação de seguir em frente.",
-        "Não importa quantas vezes você caia, o importante é levantar-se sempre.",
-        "A verdadeira mudança começa de dentro para fora.",
-        "O Senhor é fiel para fortalecer e proteger os que confiam nele. — 2 Tessalonicenses 3:3 (NVI)",
-        "O sucesso não se mede pelas vitórias, mas pela resiliência.",
-        "A jornada de mil milhas começa com o primeiro passo.",
-        "Você não precisa ser perfeito para começar, mas precisa começar para ser perfeito.",
-        "Com fé, tudo é possível. — Mateus 17:20 (NVI)",
-        "Nada é impossível para quem tem a determinação de vencer.",
-        "O segredo do sucesso é a constância do propósito.",
-        "Acredite em si mesmo e todo o universo conspirará a seu favor.",
-        "Com o Senhor ao seu lado, você não tem limites.",
-        "O Senhor é o meu auxílio, nada temerei. — Salmo 118:6 (NVI)",
-        "As oportunidades surgem para aqueles que se preparam para elas.",
-        "Não importa quão devagar você vá, desde que não pare.",
-        "Se você quer algo que nunca teve, faça algo que nunca fez.",
-        "A fé remove montanhas, mas o trabalho árduo as escala.",
-        "Vença todos os obstáculos com coragem e fé no Senhor.",
-        "Não existe vitória sem esforço. — 1 Coríntios 9:24 (NVI)",
-        "Os que esperam no Senhor renovarão as suas forças. — Isaías 40:31 (NVI)",
-        "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
-        "A verdadeira vitória é superar os desafios internos.",
-        "Deus prepara o caminho para aqueles que confiam nele.",
-        "A fé é a certeza das coisas que se esperam, a convicção de fatos que não se veem. — Hebreus 11:1 (NVI)",
+        "A sua perseverança será o segredo do seu sucesso.",
 
+    "Não diminua a meta, aumente o esforço.",
+
+    "A disciplina começa quando você faz o que não quer para conquistar o que quer.",
+
+    "Você não precisa estar motivado, só precisa continuar.",
+
+    "Quem planta esforço, colhe resultado.",
+
+    "O impossível só existe até alguém ir lá e fazer.",
+
+    "Fé não é sentir, é continuar mesmo sem entender.",
+
+    "Deus honra quem não desiste.",
+
+    "Enquanto muitos reclamam, você trabalha em silêncio.",
+
+    "Milagres acontecem para quem não para.",
+
+    "Trabalhe em silêncio, deixe o resultado fazer barulho.",
+
+    "Um passo por dia ainda é um avanço.",
+
+    "Deus vê o que você faz quando ninguém está olhando.",
+
+    "A consistência vence o talento.",
+
+    "Você foi feito para ir além.",
+
+    "Sonhar grande ou pequeno dá o mesmo trabalho. Então sonhe grande.",
+
+    "Ore, confie, aja.",
+
+    "As maiores vitórias vêm depois das maiores lutas.",
+
+    "A fé te leva onde a força não alcança.",
+
+    "O esforço de hoje é o sucesso de amanhã.",
+
+    "Levanta, Deus ainda está escrevendo a sua história.",
+
+    "Coloque Deus no centro e tudo se alinha.",
+
+    "O cansaço vai passar. A conquista vai chegar.",
+
+    "É no silêncio que Deus prepara a vitória.",
+
+    "Você não precisa ter tudo agora. Precisa ter direção.",
+
+    "O que te falta em motivação, complete com disciplina.",
+
+    "Continue mesmo sem aplausos.",
+
+    "Quem tem fé, tem força dobrada.",
+
+    "Grandes mudanças começam com pequenas ações.",
+
+    "A colheita é garantida para quem não para de plantar.",
+
+    "Sua atitude hoje define seus resultados amanhã.",
+
+    "Enquanto você espera, Deus trabalha.",
+
+    "Não é sobre velocidade, é sobre constância.",
+
+    "Dias difíceis constroem pessoas fortes.",
+
+    "Persistir é uma forma de fé.",
+
+    "Quem busca, encontra. Quem planta, colhe.",
+
+    "Não pule o processo, ele faz parte do plano.",
+
+    "Dê o seu melhor em silêncio. Deus vê tudo.",
+
+    "A bênção chega quando você estiver pronto.",
+
+    "Vai doer, mas vai valer.",
+
+    "O que te faz crescer nem sempre é confortável.",
+
+    "O fracasso só é real se você parar.",
+
+    "Quem se prepara, não se desespera.",
+
+    "Ore como se tudo dependesse de Deus. Trabalhe como se tudo dependesse de você.",
+
+    "O esforço que ninguém vê traz o resultado que todos vão ver.",
+
+    "Continue. A sua hora vai chegar.",
+
+    "Nem sempre será fácil, mas sempre valerá a pena.",
+
+    "Toda prova tem prazo de validade.",
+
+    "Enquanto houver fé, há caminho.",
+
+    "Se você não desistir, Deus não deixa de agir.",
+
+    "O justo viverá pela fé. — Romanos 1:17",
+
+    "Sem fé é impossível agradar a Deus. — Hebreus 11:6",
+
+    "Não temas, porque eu sou contigo; não te assombres, porque eu sou o teu Deus. — Isaías 41:10",
+
+    "Tudo é possível àquele que crê. — Marcos 9:23",
+
+    "Confie no Senhor e faça o bem; assim você habitará na terra e desfrutará segurança. — Salmo 37:3",
+
+    "O anjo do Senhor acampa-se ao redor dos que o temem, e os livra. — Salmo 34:7",
+
+    "Mil cairão ao teu lado, dez mil à tua direita, mas tu não serás atingido. — Salmo 91:7",
+
+    "O Senhor é bom, um refúgio em tempos de angústia. Ele protege os que nele confiam. — Naum 1:7",
+
+    "Em paz me deito e logo adormeço, pois só tu, Senhor, me fazes viver em segurança. — Salmo 4:8",
+
+    "Ele te cobrirá com as suas penas, e sob suas asas encontrarás refúgio. — Salmo 91:4",
+
+    "O Senhor cumprirá o seu propósito para comigo. — Salmo 138:8",
+
+    "Tudo quanto fizerem, façam de todo o coração, como para o Senhor. — Colossenses 3:23",
+
+    "Agrada-te do Senhor, e ele satisfará os desejos do teu coração. — Salmo 37:4",
+
+    "Se Deus é por nós, quem será contra nós? — Romanos 8:31",
+
+    "O Senhor dará força ao seu povo; o Senhor abençoará o seu povo com paz. — Salmo 29:11"
         ];
 
         let usedVerses = [];
